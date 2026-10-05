@@ -3,66 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="Portfolio.css">
+    <title>Erwan PAULOIN — Étudiant BUT Informatique</title>
+    <meta name="description" content="Portfolio d'Erwan PAULOIN, étudiant en BUT Informatique à l'IUT de Blagnac : Java, Python, développement web, bases de données.">
+    <meta name="theme-color" content="#0b0a0d">
+    <meta property="og:title" content="Erwan PAULOIN — Portfolio">
+    <meta property="og:description" content="Étudiant en BUT Informatique à l'IUT de Blagnac. Projets, compétences et contact.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="japo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Shippori+Mincho:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Mon Portfolio</h1>
-    </div>
-    <div class="container">
-        <section class="about">
-            <h2>À propos de moi</h2>
-            <p>Bonjour, je m'appelle Erwan PAULOIN, étudiant en informatique et passionné par l'informatique depuis petit.</p>
-            <p>Actuellement en 1ère année de BUT Informatique à l'IUT de Blagnac.</p>
-        </section>
-        <section class="skills">
-            <h2>Compétences</h2>
-            <ul>
-                <li>Programmation en Java et Python</li>
-                <li>Développement web (HTML, CSS, JavaScript)</li>
-                <li>Base de données (SQL, MySQL)</li>
-                <li>Travail en équipe et gestion de projet</li>
-                <li>Algorithmique et structures de données</li>
-                <li>Résolution de problèmes techniques</li>
+    <a class="skip" href="#main">Aller au contenu</a>
+    <div class="progress" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+    <canvas id="sakura" aria-hidden="true"></canvas>
+
+    <header class="nav" id="nav">
+        <a class="brand" href="#top" aria-label="Accueil">
+            <span class="hanko">EP</span>
+            <span class="brand-name">Erwan Pauloin</span>
+        </a>
+        <nav aria-label="Navigation principale">
+            <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+            <ul class="menu">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact" class="menu-cta">Contact</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero" id="top">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="sun" aria-hidden="true"></div>
+            <div class="hero-inner">
+                <p class="eyebrow reveal"><span class="dot"></span> BUT Informatique · IUT de Blagnac</p>
+                <h1 class="reveal" style="--d:.08s">
+                    <span class="line">Erwan</span>
+                    <span class="line accent">PAULOIN</span>
+                </h1>
+                <p class="role reveal" style="--d:.16s">
+                    Étudiant développeur,&nbsp;<span id="typed" class="typed" aria-live="polite"></span><span class="caret" aria-hidden="true"></span>
+                </p>
+                <p class="lead reveal" style="--d:.24s">
+                    Passionné d'informatique depuis tout petit, je transforme la curiosité en projets concrets :
+                    du code Java et Python aux interfaces web.
+                </p>
+                <div class="cta reveal" style="--d:.32s">
+                    <a class="btn primary" href="#projects">Voir mes projets <span aria-hidden="true">→</span></a>
+                    <a class="btn ghost" href="#contact">Me contacter</a>
+                </div>
+            </div>
+            <span class="kanji" aria-hidden="true">開発</span>
+            <a class="scroll" href="#about" aria-label="Défiler vers le bas"><span></span></a>
         </section>
-        <section class="projects">
-            <h2>Projets</h2>
-            <div class="portfolio-item">
-                <h3>Mon Portfolio</h3>
-                <img src="image1.jpg" alt="Mon Portfolio">
-                <p>Description de ce site internet qui présente mon portfolio.</p>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="wrap grid-2">
+                <div>
+                    <p class="sec-num reveal">01<span>— À propos</span></p>
+                    <h2 class="reveal">Un parcours construit <em>par passion.</em></h2>
+                    <p class="reveal">Bonjour, je m'appelle <strong>Erwan PAULOIN</strong>, étudiant en informatique et passionné par l'informatique depuis petit.</p>
+                    <p class="reveal">Actuellement en <strong>1ère année de BUT Informatique</strong> à l'IUT de Blagnac, j'apprends à concevoir, développer et livrer des projets en équipe.</p>
+                </div>
+                <aside class="card id-card reveal tilt" aria-label="Fiche rapide">
+                    <span class="stamp" aria-hidden="true">学</span>
+                    <dl>
+                        <div><dt>Formation</dt><dd>BUT Informatique</dd></div>
+                        <div><dt>Année</dt><dd>1ère année</dd></div>
+                        <div><dt>École</dt><dd>IUT de Blagnac</dd></div>
+                        <div><dt>Focus</dt><dd>Java · Python · Web</dd></div>
+                    </dl>
+                </aside>
             </div>
-            <div class="portfolio-item">
-                <h3>Poster sur un Métier en Informatique</h3>
-                <img src="image2.jpg" alt="Poster Métier Informatique">
-                <p>Un poster détaillant un métier dans le domaine de l'informatique.</p>
-            </div>
-            <div class="portfolio-item">
-                <h3>Recueil de Besoins lors d'une SAE</h3>
-                <img src="image3.jpg" alt="Recueil de Besoins">
-                <p>Un document de recueil de besoins élaboré lors d'une situation d'apprentissage et d'évaluation (SAE).</p>
-                <a href="https://www.youtube.com/watch?v=lien_de_votre_video1" target="_blank">Voir la vidéo du recueil de besoins</a>
-            </div>
-            <div class="portfolio-item">
-                <h3>Vidéo Tutoriel CurseForge</h3>
-                <img src="image4.jpg" alt="Vidéo Tutoriel CurseForge">
-                <p>Un tutoriel vidéo sur l'utilisation de CurseForge.</p>
-                <a href="https://youtu.be/UQj5QC-afNI" target="_blank">Voir la vidéo tutoriel CurseForge</a>
-            </div>
-            <!-- Ajouter plus de projets ici -->
         </section>
-        <section class="contact">
-            <h2>Réseaux sociaux</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/votrenom">LinkedIn</a></li>
-                <li><a href="https://github.com/ZakapiaFR">GitHub</a></li>
-                <li><a href="https://x.com/zakapia_off">Twitter</a></li>
-                <!-- Ajouter plus de réseaux sociaux ici -->
-            </ul>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <div class="wrap">
+                <p class="sec-num reveal">02<span>— Compétences</span></p>
+                <h2 class="reveal">Ma <em>boîte à outils.</em></h2>
+                <div class="skills-grid">
+                    <article class="card skill reveal tilt">
+                        <span class="ico" aria-hidden="true">{ }</span>
+                        <h3>Programmation</h3>
+                        <ul class="tags"><li>Java</li><li>Python</li></ul>
+                    </article>
+                    <article class="card skill reveal tilt" style="--d:.08s">
+                        <span class="ico" aria-hidden="true">&lt;/&gt;</span>
+                        <h3>Développement web</h3>
+                        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                    </article>
+                    <article class="card skill reveal tilt" style="--d:.16s">
+                        <span class="ico" aria-hidden="true">DB</span>
+                        <h3>Bases de données</h3>
+                        <ul class="tags"><li>SQL</li><li>MySQL</li></ul>
+                    </article>
+                    <article class="card skill reveal tilt" style="--d:.24s">
+                        <span class="ico" aria-hidden="true">∑</span>
+                        <h3>Algorithmique</h3>
+                        <ul class="tags"><li>Structures de données</li><li>Résolution de problèmes techniques</li></ul>
+                    </article>
+                    <article class="card skill wide reveal tilt" style="--d:.32s">
+                        <span class="ico" aria-hidden="true">人</span>
+                        <h3>Travail en équipe &amp; gestion de projet</h3>
+                        <p>Organisation, communication et répartition des tâches sur les SAE du BUT.</p>
+                    </article>
+                </div>
+            </div>
         </section>
-        <script src="portfoliopetale.js"></script>
-    </div>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="wrap">
+                <p class="sec-num reveal">03<span>— Projets</span></p>
+                <h2 class="reveal">Mes <em>réalisations.</em></h2>
+                <div class="projects-grid">
+                    <article class="project reveal tilt">
+                        <figure class="ph" data-k="網"><img src="image1.jpg" alt="Capture du portfolio" loading="lazy" onerror="this.remove()"></figure>
+                        <div class="p-body">
+                            <span class="p-index">01</span>
+                            <h3>Mon Portfolio</h3>
+                            <p>Description de ce site internet qui présente mon portfolio.</p>
+                            <a class="link" href="https://github.com/ZakapiaFR/MonPortfolio.github.io" target="_blank" rel="noopener">Voir le code <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="project reveal tilt" style="--d:.08s">
+                        <figure class="ph" data-k="職"><img src="image2.jpg" alt="Poster sur un métier en informatique" loading="lazy" onerror="this.remove()"></figure>
+                        <div class="p-body">
+                            <span class="p-index">02</span>
+                            <h3>Poster sur un métier en informatique</h3>
+                            <p>Un poster détaillant un métier dans le domaine de l'informatique.</p>
+                        </div>
+                    </article>
+                    <article class="project reveal tilt" style="--d:.16s">
+                        <figure class="ph" data-k="要"><img src="image3.jpg" alt="Recueil de besoins" loading="lazy" onerror="this.remove()"></figure>
+                        <div class="p-body">
+                            <span class="p-index">03</span>
+                            <h3>Recueil de besoins lors d'une SAE</h3>
+                            <p>Un document de recueil de besoins élaboré lors d'une situation d'apprentissage et d'évaluation (SAE).</p>
+                            <!-- TODO : remplace lien_de_votre_video1 par l'identifiant réel de ta vidéo -->
+                            <a class="link" href="https://www.youtube.com/watch?v=lien_de_votre_video1" target="_blank" rel="noopener">Voir la vidéo <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="project reveal tilt" style="--d:.24s">
+                        <figure class="ph" data-k="動"><img src="image4.jpg" alt="Vidéo tutoriel CurseForge" loading="lazy" onerror="this.remove()"></figure>
+                        <div class="p-body">
+                            <span class="p-index">04</span>
+                            <h3>Vidéo tutoriel CurseForge</h3>
+                            <p>Un tutoriel vidéo sur l'utilisation de CurseForge.</p>
+                            <a class="link" href="https://youtu.be/UQj5QC-afNI" target="_blank" rel="noopener">Voir la vidéo <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="wrap">
+                <div class="contact-card reveal">
+                    <p class="sec-num">04<span>— Contact</span></p>
+                    <h2>Travaillons <em>ensemble.</em></h2>
+                    <p class="lead">Un projet, un stage, une question ? Retrouve-moi sur les réseaux.</p>
+                    <ul class="socials">
+                        <!-- TODO : remplace "votrenom" par ton vrai identifiant LinkedIn -->
+                        <li><a class="btn ghost" href="https://www.linkedin.com/in/votrenom" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+                        <li><a class="btn ghost" href="https://github.com/ZakapiaFR" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+                        <li><a class="btn ghost" href="https://x.com/zakapia_off" target="_blank" rel="noopener">X / Twitter <span aria-hidden="true">↗</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year">2026</span> Erwan PAULOIN · Fait avec soin <span class="sak" aria-hidden="true">🌸</span></p>
+        <a href="#top" class="totop" aria-label="Retour en haut">↑</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
